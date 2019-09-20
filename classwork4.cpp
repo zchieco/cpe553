@@ -19,7 +19,7 @@ public:
 	Vec3d operator - () const {
 		return Vec3d(-1*x,-1*y,-1*z);
 	}
-	friend ostream& operator << (ostream& s, const Vec3d& a){
+	friend ostream& operator << (ostream& s, const Vec3d a){
 	return s << '(' << a.x << ',' << a.y << ',' << a.z << ')';
 	}
 };
