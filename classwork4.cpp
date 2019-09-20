@@ -6,8 +6,12 @@ private:
 	double x,y,z;
 
 public:
-	Vec3d(double x=0, double y=0, double z=0) : x(x), y(y), z(z){}
-	friend double dot(Vec3d a, Vec3d b) {
+	Vec3d(double x, double y, double z) : x(x), y(y), z(z){}
+	Vec3d() : x(0),y(0),z(0){}
+	double dot (const Vec3d b) const {
+		return x*b.x+y*b.y+z*b.z;
+	}
+	friend double dot(const Vec3d a, const Vec3d b) {
 		return (a.x*b.x+a.y*b.y+a.z*b.z);
 	}
 	friend Vec3d operator + (Vec3d a, Vec3d b) {
